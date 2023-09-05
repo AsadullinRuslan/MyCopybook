@@ -1,0 +1,134 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap'); */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#root {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(127, 255, 212, .2);
+}
+
+.container {
+    width: 90%;
+    height: 90vh;
+}
+
+.newWrite {
+    margin: 7px;
+    padding: 15px;
+    width: 100%;
+    height: 70px;
+    border: 1px solid rgba(127, 255, 212, .5);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newWrite:hover {
+    box-shadow: 3px 4px 10px 1px rgba(127, 255, 212, .8);
+}
+
+.btn {
+    padding: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(127, 255, 212, .5);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.width30 {
+    width: 30%;
+    border: 2px solid rgba(127, 255, 212, .7);
+    border-radius: 5px;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 8px 1px rgba(127, 255, 212, .8);
+}
+
+.btn:active {
+    box-shadow: none;
+    transform: translate(1px, 1px);
+}
+
+.changeItem {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+}
+
+.changeItem>div>label {
+ margin: 15px;}
+
+.newItem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(95, 158, 160, .9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.newItem.show {
+    display: flex;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+    border: 1px solid rgba(135, 206, 250);
+    box-shadow: 1px 1px 5px 1px rgba(135, 206, 250, .7);
+    border-radius: 3px;
+}
+
+.newTitle {
+    width: 300px;
+    height: 30px; 
+    margin: 20px;
+    outline: none;
+    border: 1px solid rgb(250, 219, 135, .4);
+}
+.newTitle:focus {
+    box-shadow: 1px 1px 5px 1px rgba(250, 219, 135, .7);
+}
+
+.search {
+    position: absolute;
+    top: 4.6em;
+    right: 4%;
+}
+
+#searchInput {
+    max-width: 170px;
+    height: 20px;
+    margin-left: 10px;
+    border: 1px solid rgb(250, 219, 135, .4);
+    outline: none;
+}
+#searchInput:focus {
+    box-shadow: 1px 1px 5px 1px rgba(250, 219, 135, .7);
+}
+
+.important {
+    background-color: rgb(241, 131, 131);
+}
