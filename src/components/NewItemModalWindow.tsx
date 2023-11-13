@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 
-const NewItem = ({ modal, setModal, listToDo, setListToDo }) => {
-    const [title, setTitle] = useState("");
+interface INewItem {
+    modal: boolean, 
+    setModal: any, 
+    listToDo: object[], 
+    setListToDo: any,
+}
+
+const NewItem = ({ modal, setModal, listToDo, setListToDo }: INewItem) => {
+    const [title, setTitle] = useState<String>("");
 
     const onClickCreate = () => {
         if (title.trim()) {
@@ -13,10 +20,6 @@ const NewItem = ({ modal, setModal, listToDo, setListToDo }) => {
         }
         setTitle("");
         setModal(false);
-    };
-
-    const onChangeTitle = (e) => {
-        setTitle(e);
     };
 
     return (
@@ -31,7 +34,7 @@ const NewItem = ({ modal, setModal, listToDo, setListToDo }) => {
                     autoFocus
                     className="newTitle"
                     type="text"
-                    onChange={(e) => onChangeTitle(e.target.value)}
+                    onChange={(e) => setTitle(e.target.value)}
                 />
                 <button onClick={onClickCreate} className="btn width30">
                     Создать

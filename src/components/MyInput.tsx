@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC, ReactElement } from 'react';
 
-const MyInput = (props) => {
+const MyInput: FC = (props: {}): ReactElement => {
     return (
         <div>
             <input type="text" {...props}/>
